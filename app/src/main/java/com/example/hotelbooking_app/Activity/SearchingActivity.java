@@ -1,10 +1,12 @@
-package com.example.hotelbooking_app;
+package com.example.hotelbooking_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.hotelbooking_app.R;
+
+public class SearchingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
