@@ -5,4 +5,6 @@
 
     <color name="searching_primaryColor">#06B3C4</color>
     <color name="searching_grey">#9A9EA6</color>
+    <color name="searching_yellow">#FFCE19</color>
+    <color name="searching_cardBg">#FBFBFD</color>
 </resources>
