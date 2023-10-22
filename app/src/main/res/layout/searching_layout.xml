@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.SearchingActivity">
+    tools:context=".Searching.Activity.SearchingActivity">
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,53 +16,102 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="20dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/searching_backBtn"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/searching_back_icon"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/searching_editText"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/searching_edittext_background"
-                android:drawableStart="@drawable/searching_search_icon"
-                android:drawablePadding="8dp"
-                android:hint="hotel"
-                android:inputType="text"
-                android:padding="8dp"
-                android:text=""
-                android:textColor="@color/black"
-                android:textColorHint="@color/searching_grey"
-                app:layout_constraintBottom_toBottomOf="@+id/searching_backBtn"
-                app:layout_constraintEnd_toStartOf="@+id/searching_filterBtn"
-                app:layout_constraintHorizontal_bias="0.01"
-                app:layout_constraintStart_toEndOf="@+id/searching_backBtn"
-                app:layout_constraintTop_toTopOf="@+id/searching_backBtn" />
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="20dp">
 
-            <ImageButton
-                android:id="@+id/searching_filterBtn"
-                android:layout_width="24dp"
+                <ImageButton
+                    android:id="@+id/searching_backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/searching_back_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/searching_editText"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/searching_edittext_background"
+                    android:drawableStart="@drawable/searching_search_icon"
+                    android:drawablePadding="8dp"
+                    android:hint="hotel"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/searching_grey"
+                    app:layout_constraintBottom_toBottomOf="@+id/searching_backBtn"
+                    app:layout_constraintEnd_toStartOf="@+id/searching_filterBtn"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintStart_toEndOf="@+id/searching_backBtn"
+                    app:layout_constraintTop_toTopOf="@+id/searching_backBtn" />
+
+                <ImageButton
+                    android:id="@+id/searching_filterBtn"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/searching_filter_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/searching_editText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/searching_editText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/searching_filter_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/searching_editText"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/searching_editText" />
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="horizontal">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvLastSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Last Search"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvClearAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtClearAll"
+                    android:textColor="@color/searching_primaryColor"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLastSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:scrollbars="horizontal"
+                />
+
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
