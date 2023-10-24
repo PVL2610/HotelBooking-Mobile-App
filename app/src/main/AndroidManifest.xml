@@ -13,7 +13,7 @@
         android:theme="@style/Theme.HotelBooking_App"
         tools:targetApi="31">
         <activity
-            android:name=".Searching.Activity.SearchingActivity"
+            android:name=".Searching.Activity.DetailActivity"
             android:exported="true">
         </activity>
         <activity
@@ -24,11 +24,28 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+<<<<<<< HEAD
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
         </activity>
+=======
+
+        </activity>
+        <activity
+            android:name=".Searching.Activity.SearchingActivity"
+            android:exported="false">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"></activity>
+>>>>>>> 44079e5 (detail hotel #1)
     </application>
 
 </manifest>
