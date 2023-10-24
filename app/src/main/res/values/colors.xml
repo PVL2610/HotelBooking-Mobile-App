@@ -13,6 +13,7 @@
 
     <color name="booking_primaryColor">#06B3C4</color>
     <color name="booking_grey">#949494</color>
-    <color name="booking_medium_grey">#F6F6F6</color>
+    <color name="booking_light_grey">#F6F6F6</color>
+    <color name="booking_medium_grey">#ECECEC</color>
 
 </resources>
