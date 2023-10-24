@@ -3,4 +3,5 @@
 
     <string name="txtClearAll">Clear All</string>
     <string name="txtSeeAll">See All</string>
+    <string name="txtViewDetail">View Detail</string>
 </resources>
