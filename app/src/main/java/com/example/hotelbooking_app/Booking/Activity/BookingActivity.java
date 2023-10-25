@@ -1,7 +1,9 @@
 package com.example.hotelbooking_app.Booking.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,17 +17,24 @@ import com.example.hotelbooking_app.Booking.Fragment.BookingGuestsSelectBottomSh
 import com.example.hotelbooking_app.Booking.Item.BookingRoomType;
 import com.example.hotelbooking_app.Booking.Fragment.BookingRoomsSelectBottomSheet;
 import com.example.hotelbooking_app.R;
+import com.example.hotelbooking_app.Register.RegisterActivity;
 
 import java.util.ArrayList;
 
 public class BookingActivity  extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.booking_layout);
 
-        TextView guestsSelect = findViewById(R.id.guests_number_select);
-        TextView roomsSelect = findViewById(R.id.room_type_select);
+        Button openRegistrationButton = findViewById(R.id.continue_button);
+        openRegistrationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              // Mở RegistrationActivity khi người dùng nhấn nút
+              TextView guestsSelect = findViewById(R.id.guests_number_select);
+              TextView roomsSelect = findViewById(R.id.room_type_select);
         guestsSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +51,7 @@ public class BookingActivity  extends AppCompatActivity {
             }
         });
     }
+
 
     public void createRoomTypeRecyclerView() {
         RecyclerView recyclerView;
