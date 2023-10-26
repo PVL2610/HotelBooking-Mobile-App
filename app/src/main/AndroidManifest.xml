@@ -31,7 +31,7 @@
         <activity
             android:name=".Searching.Activity.DetailActivity"
             android:exported="true" />
-        </activity>
+
 
         <activity
             android:name=".Booking.Activity.BookingActivity"
@@ -52,13 +52,15 @@
         <activity
             android:name=".Searching.Activity.SearchingActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
 
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
     </application>
+
+
 
 </manifest>
